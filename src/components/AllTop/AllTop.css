@@ -1,0 +1,11 @@
+.all-top {
+  background-color: var(--back-color-2);
+  display: flex;
+  position: relative;
+}
+
+.all-top h5 {
+  position: fixed;
+  right: 0;
+  top: 20px;
+}

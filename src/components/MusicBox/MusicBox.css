@@ -1,0 +1,78 @@
+.music-box {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+}
+
+.music-box .box-img {
+  margin-bottom: 25px;
+
+  position: relative;
+}
+
+.music-box .box-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0e00368b;
+  transition: var(--transition);
+}
+
+.music-box .box-img:hover::before {
+  content: "";
+  background-color: transparent;
+
+}
+
+.music-box .box-img span {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-fnt-2);
+  color: var(--main-color-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: var(--fnt-20);
+  font-weight: bolder;
+}
+
+.music-box .box-img span.active {
+
+  background-color: red;
+}
+
+.music-box .box-img span svg {}
+
+.music-box .box-img img {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+}
+
+.music-box h4 {
+
+  color: var(--color-fnt-1);
+  text-transform: capitalize;
+  font-size: var(--fnt-22);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.music-box h6 {
+
+  color: var(--color-fnt-1);
+  text-transform: capitalize;
+  font-size: var(--fnt-18);
+  font-weight: 600;
+  margin-bottom: 5px;
+}

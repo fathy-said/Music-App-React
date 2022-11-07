@@ -1,12 +1,12 @@
 import React from "react";
 
-import { Navbar } from "./components";
 import "./App.css";
+import AllPages from "./Pages/AllPages";
 
 const App = () => (
-    <div>
-        <Navbar />
-    </div>
+    <>
+        <AllPages />
+    </>
 );
 
 export default App;

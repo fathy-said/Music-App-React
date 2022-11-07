@@ -1,0 +1,16 @@
+export let dataOption = [
+    { name: "pop", value: "pop" },
+    { name: "hip-hop", value: "hip-hop" },
+    { name: "dance", value: "dance" },
+    { name: "electronic", value: "electronic" },
+    { name: "soul", value: "soul" },
+    { name: "alternive", value: "alternive" },
+    { name: "rock", value: "rock" },
+    { name: "latin", value: "latin" },
+    { name: "film", value: "film" },
+    { name: "country", value: "country" },
+    { name: "worldwide", value: "worldwide" },
+    { name: "reggae", value: "reggae" },
+    { name: "house", value: "house" },
+    { name: "k-pop", value: "k-pop" },
+];
