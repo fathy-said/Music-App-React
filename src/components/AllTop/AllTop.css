@@ -1,11 +1,20 @@
 .all-top {
-  background-color: var(--back-color-2);
   display: flex;
   position: relative;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.all-top h5 {
+.all-top .all {
   position: fixed;
-  right: 0;
-  top: 20px;
+  padding: 0 12px;
+}
+
+@media (max-width:992px) {
+  .all-top .all {
+    position: relative;
+    right: 0;
+    width: 100%;
+  }
 }

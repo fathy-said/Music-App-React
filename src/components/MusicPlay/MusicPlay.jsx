@@ -75,7 +75,6 @@ const MusicPlay = () => {
                         src={getMusic ? getMusic[0].hub.actions[1].uri : ""}
                         type="audio/x-m4a"
                         controls
-                        autoplay="autoplay"
                     ></audio>
                     <span
                         className="close-music"

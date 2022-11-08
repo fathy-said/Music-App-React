@@ -6,6 +6,8 @@ import Search from "./Search/Search.jsx";
 import DiscoverTitle from "./DiscoverTitle/DiscoverTitle.jsx";
 import DiscoverBox from "./DiscoverBox/DiscoverBox.jsx";
 import MusicBox from "./MusicBox/MusicBox.jsx";
+import SmArtist from "./SmArtist/SmArtist.jsx";
+import SmChart from "./SmChart/SmChart.jsx";
 
 export {
     MenuItem,
@@ -16,4 +18,6 @@ export {
     DiscoverTitle,
     DiscoverBox,
     MusicBox,
+    SmArtist,
+    SmChart,
 };
