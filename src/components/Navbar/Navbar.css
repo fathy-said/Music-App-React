@@ -1,6 +1,5 @@
 .header {
   background-color: var(--back-color-2);
-  height: 100%;
   display: flex;
   position: relative;
 }

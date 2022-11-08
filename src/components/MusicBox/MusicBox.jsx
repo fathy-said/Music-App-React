@@ -1,21 +1,22 @@
 import React from "react";
 import "./MusicBox.css";
 import { IoPlay } from "react-icons/io5";
+import { useContext } from "react";
+import { IdContext } from "../../constants/ContextApi";
 
-import img from "../../assets/cat-01.jpg";
+const MusicBox = ({ Img, Title, subtitle, Id }) => {
+    const { changeContextID } = useContext(IdContext);
 
-const MusicBox = () => {
     let showplay = (e) => {
-        // console.log();
-
         document.querySelector(".music-play").classList.remove("remove");
         document.querySelector(".music-play").classList.add("show");
+        changeContextID(Id);
     };
     return (
         <>
-            <div className="music-box">
+            <div className="music-box" id={Id}>
                 <div className="box-img">
-                    <img src={img} alt="" />
+                    <img src={Img} alt="" />
                     <span
                         onClick={(e) => {
                             showplay(e);
@@ -29,8 +30,8 @@ const MusicBox = () => {
                         />
                     </span>
                 </div>
-                <h4>under the influence</h4>
-                <h6>influence</h6>
+                <h4>{Title}</h4>
+                <h6>{subtitle}</h6>
             </div>
         </>
     );
