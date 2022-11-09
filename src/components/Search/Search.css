@@ -3,6 +3,8 @@
   padding: 20px 0;
 }
 
+
+
 .box-search form div {
   position: relative;
 
@@ -51,11 +53,21 @@
 
 .box-search span svg {}
 
+.box-search .menu {
+  all: unset;
+  display: none;
+  font-size: var(--fnt-28);
+  cursor: pointer;
+  cursor: pointer;
+  color: var(--color-fnt-2);
+}
+
 @media (max-width:992px) {
 
 
 
-  .box-search form {
+
+  .box-search {
     position: fixed;
     left: 50%;
     top: 0;
@@ -66,6 +78,11 @@
     height: 60px;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  .box-search .menu {
+    display: flex;
   }
 }

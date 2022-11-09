@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SmArtist.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { musicData } from "../../constants/data";
 const SmArtist = () => {
+    const [getTopArtists, setTopArtists] = useState(musicData.slice(0, 5));
     return (
         <div className="sm-artist">
             <div className="title-box">
@@ -19,7 +21,6 @@ const SmArtist = () => {
                         gap: "4rem",
                         type: "loop",
                         focus: "center",
-
                         breakpoints: {
                             992: {
                                 perPage: 4,
@@ -36,38 +37,27 @@ const SmArtist = () => {
                         },
                     }}
                 >
-                    <SplideSlide>
-                        <div className="box-img">
-                            <img
-                                src="https://i1.sndcdn.com/avatars-000290424646-nat4bk-t500x500.jpg"
-                                alt=""
-                            />
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="box-img">
-                            <img
-                                src="https://i1.sndcdn.com/avatars-000290424646-nat4bk-t500x500.jpg"
-                                alt=""
-                            />
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="box-img">
-                            <img
-                                src="https://i1.sndcdn.com/avatars-000290424646-nat4bk-t500x500.jpg"
-                                alt=""
-                            />
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="box-img">
-                            <img
-                                src="https://i1.sndcdn.com/avatars-000290424646-nat4bk-t500x500.jpg"
-                                alt=""
-                            />
-                        </div>
-                    </SplideSlide>
+
+                    {
+                        getTopArtists ? (getTopArtists.map((artist) => {
+                            return (
+                                <SplideSlide key={artist.key}>
+                                    <div className="box-img">
+                                        <img
+                                            src={artist.images.background}
+                                            alt=""
+                                        />
+                                    </div>
+                                </SplideSlide>
+
+                            )
+
+                        })) : null
+
+
+                    }
+
+
                 </Splide>
             </div>
         </div>

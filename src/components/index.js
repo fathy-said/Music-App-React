@@ -1,5 +1,5 @@
 import MenuItem from "./Menuitem/MenuItem";
-import Navbar from "./Navbar/Navbar";
+import Navbar from "./Navbar/Header";
 import DiscoverContainer from "./Discover/DiscoverContainer.jsx";
 import AllTop from "./AllTop/AllTop.jsx";
 import Search from "./Search/Search.jsx";
