@@ -4,7 +4,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { musicData } from "../../constants/data";
 const SmArtist = () => {
-    const [getTopArtists, setTopArtists] = useState(musicData.slice(0, 5));
+    const [getTopArtists] = useState(musicData.slice(0, 5));
     return (
         <div className="sm-artist">
             <div className="title-box">

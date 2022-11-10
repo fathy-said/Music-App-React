@@ -4,7 +4,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { musicData, MusicCountryData } from "../../constants/data";
 import { useContext } from "react";
 import { IdContext } from "../../constants/ContextMusicApi.js";
-import Fade from "react-reveal/Fade";
+import Fade from 'react-reveal/Fade';
 import { useLocation } from "react-router-dom";
 const SmChart = () => {
     let location = useLocation()

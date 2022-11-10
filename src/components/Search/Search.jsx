@@ -5,7 +5,7 @@ import { TbMenu2 } from "react-icons/tb";
 import { useContext } from "react";
 import { IdContext } from "../../constants/ContextMusicApi";
 const Search = () => {
-    let { getContextSearch, changeContextSearch } = useContext(IdContext);
+    let { changeContextSearch } = useContext(IdContext);
     let headerActive = (e) => {
         document.querySelector('.header').classList.add("active")
 

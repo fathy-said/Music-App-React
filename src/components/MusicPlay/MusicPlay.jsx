@@ -1,5 +1,4 @@
 import React from "react";
-import od from "../../assets/‫نجاة_الصغيرة_-_لا_تكذبي‬(128k).m4a";
 import { CgClose } from "react-icons/cg";
 import "./MusicPlay.css";
 import { useState, useContext, useEffect } from "react";

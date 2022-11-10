@@ -9,7 +9,7 @@ const Header = () => {
         <div className="header  col-md-2   d-lg-block row">
             <div className="box col-md-2 ">
                 <div className="logo">
-                    <a href="">MUSICPLAY</a>
+                    <a href="#">MUSICPLAY</a>
                 </div>
                 <div className="box-link">
                     <NavLink to={"/"}>
