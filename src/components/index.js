@@ -8,6 +8,7 @@ import DiscoverBox from "./DiscoverBox/DiscoverBox.jsx";
 import MusicBox from "./MusicBox/MusicBox.jsx";
 import SmArtist from "./SmArtist/SmArtist.jsx";
 import SmChart from "./SmChart/SmChart.jsx";
+import DetailBox from "./DetailBox/DetailBox.jsx";
 
 export {
     MenuItem,
@@ -20,4 +21,5 @@ export {
     MusicBox,
     SmArtist,
     SmChart,
+    DetailBox
 };

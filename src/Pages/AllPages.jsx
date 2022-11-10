@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import About from "./about";
-import { HomePage } from "./index";
+import { HomePage, Country, Artists, Charts, MusicDetail } from "./index";
 import { Navbar, AllTop } from "../components";
 
 const AllPages = () => {
@@ -11,7 +10,10 @@ const AllPages = () => {
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/said" element={<About />} />
+                    <Route path="/yourCountry" element={<Country />} />
+                    <Route path="/artists" element={<Artists />} />
+                    <Route path="/charts" element={<Charts />} />
+                    <Route path="/detail/:type" element={<MusicDetail />} />
                 </Routes>
                 <AllTop />
             </BrowserRouter>

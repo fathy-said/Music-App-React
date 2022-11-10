@@ -3,6 +3,7 @@ import "./MusicBox.css";
 import { IoPlay } from "react-icons/io5";
 import { useContext } from "react";
 import { IdContext } from "../../constants/ContextMusicApi.js";
+import { Link } from "react-router-dom";
 
 const MusicBox = ({ Img, Title, subtitle, Id }) => {
     const { changeContextID } = useContext(IdContext);
@@ -30,7 +31,9 @@ const MusicBox = ({ Img, Title, subtitle, Id }) => {
                         />
                     </span>
                 </div>
-                <h4>{Title}</h4>
+                <Link to={"/detail/" + Id}>
+                    <h4>{Title}</h4>
+                </Link>
                 <h6>{subtitle}</h6>
             </div>
         </>

@@ -4,13 +4,12 @@ import { CgClose } from "react-icons/cg";
 import "./MusicPlay.css";
 import { useState, useContext, useEffect } from "react";
 import { IdContext } from "../../constants/ContextMusicApi.js";
-import { musicData } from "../../constants/data";
 
-const MusicPlay = () => {
+const MusicPlay = ({ data }) => {
     const { getContextID } = useContext(IdContext);
     let [getMusic, setMusic] = useState("");
     let MusicTarget = async () => {
-        let res = await musicData.filter((el) => el.key === getContextID);
+        let res = await data.filter((el) => el.key === getContextID);
         setMusic(res);
     };
     useEffect(() => {

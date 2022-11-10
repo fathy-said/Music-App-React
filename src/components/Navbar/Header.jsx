@@ -3,7 +3,6 @@ import "./Header.css";
 import { NavLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { HiOutlinePhotograph } from "react-icons/hi";
-// import { IoPeopleOutline } from "react-icons/io";
 import { IoPeopleOutline } from "react-icons/io5";
 const Header = () => {
     return (
@@ -17,15 +16,15 @@ const Header = () => {
                         <FaHome />
                         <span>Discover</span>
                     </NavLink>
-                    <NavLink to={"Around"}>
+                    <NavLink to={"/yourCountry"}>
                         <HiOutlinePhotograph />
-                        <span>Around you</span>
+                        <span>Your Country</span>
                     </NavLink>
-                    <NavLink to={"artists"}>
-                        {/* <IoPeopleOutline /> */}
+                    <NavLink to={"/artists"}>
+                        <IoPeopleOutline />
                         <span>top artists</span>
                     </NavLink>
-                    <NavLink to={"charts"}>
+                    <NavLink to={"/charts"}>
                         #<span>top charts</span>
                     </NavLink>
                 </div>

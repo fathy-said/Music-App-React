@@ -3,7 +3,7 @@
   position: relative;
   padding: 0 !important;
   margin: 0 !important;
-
+  min-height: 100vh;
 }
 
 .header .box {
@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: start;
   gap: 7px;
-  width: 100%;
+  width: fit-content;
   text-transform: capitalize;
 
 }
@@ -54,9 +54,7 @@
 
 }
 
-.header .box .box-link a span {}
 
-.header .box .box-link a svg {}
 
 .header .close-menu {
   display: none;

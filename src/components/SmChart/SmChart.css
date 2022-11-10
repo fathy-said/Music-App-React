@@ -103,6 +103,7 @@
 .box-chart-music .play {
   width: 30px;
   height: 30px;
+  min-width: 30px;
   background-color: var(--color-fnt-1);
   border-radius: 50%;
   display: flex;

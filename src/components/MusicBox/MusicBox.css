@@ -5,11 +5,15 @@
   -webkit-backdrop-filter: blur(7px);
   border-radius: 10px;
   height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .music-box .box-img {
   margin-bottom: 25px;
-
+  width: 100%;
   position: relative;
 }
 
@@ -60,6 +64,12 @@
   height: 250px;
 }
 
+.music-box a {
+
+
+  text-decoration: none;
+}
+
 .music-box h4 {
 
   color: var(--color-fnt-1);
@@ -67,11 +77,20 @@
   font-size: var(--fnt-22);
   font-weight: 600;
   margin-bottom: 10px;
+  transition: var(--transition);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.music-box h4:hover {
+
+  color: var(--main-color-2);
+
 }
 
 .music-box h6 {
 
-  color: var(--color-fnt-1);
+  color: var(--color-fnt-2);
   text-transform: capitalize;
   font-size: var(--fnt-18);
   font-weight: 600;
