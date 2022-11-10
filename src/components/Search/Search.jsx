@@ -2,17 +2,34 @@ import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./Search.css";
 import { TbMenu2 } from "react-icons/tb";
-
+import { useContext } from "react";
+import { IdContext } from "../../constants/ContextMusicApi";
 const Search = () => {
+    let { getContextSearch, changeContextSearch } = useContext(IdContext);
     let headerActive = (e) => {
         document.querySelector('.header').classList.add("active")
 
     }
+
+
+    let searchWord = (e) => {
+        changeContextSearch(e)
+
+    }
+
     return (
         <div className="box-search">
-            <form action="">
+            <form action="" onSubmit={(e) => {
+                e.preventDefault()
+
+            }}>
                 <div>
-                    <input type="text" placeholder="Search" />
+                    <input type="text" placeholder="Search" onChange={(e) => {
+
+                        searchWord(e.target.value.length ? e.target.value[0].toUpperCase() + e.target.value.substring(1) : undefined)
+
+
+                    }} />
                     <span>
                         <AiOutlineSearch />
                     </span>

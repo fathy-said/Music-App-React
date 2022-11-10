@@ -1,21 +1,73 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./DiscoverBox.css";
 import { MusicBox } from "../index";
 import MusicPlay from "../MusicPlay/MusicPlay";
 import { musicData } from "../../constants/data";
+import { IdContext } from "../../constants/ContextMusicApi";
+import Fade from 'react-reveal/Fade';
+
 const DiscoverBox = () => {
+    let { getContextSearch } = useContext(IdContext);
+    const [getDiscoverBox, setDiscoverBox] = useState([]);
+
+
+
+    let getBox = async () => {
+
+        let res = await musicData.filter((el) => el.title === getContextSearch);
+        if (res.length) {
+            setDiscoverBox(await res)
+        }
+        else {
+            let resAll = await musicData
+            setDiscoverBox(await resAll)
+
+
+        }
+
+        // if ((getContextSearch === undefined || !(getDiscoverBox.length))) {
+
+        //     let res = await musicData
+        //     setDiscoverBox(await res)
+
+        // }
+
+        // if (!(getContextSearch === undefined)) {
+
+        //     let res = await musicData.filter((el) => el.title === getContextSearch);
+        //     if (res.length) {
+        //         setDiscoverBox(await res)
+        //     }
+
+        // }
+
+    }
+
+    useEffect(() => {
+
+        getBox()
+    }, [getContextSearch]);
+
+
     return (
+
+
         <div className="discover-box ">
-            {musicData ? (
-                musicData.map((music) => {
+            {getDiscoverBox ? (
+                getDiscoverBox.map((music) => {
                     return (
-                        <MusicBox
-                            Img={music.share.image}
-                            Title={music.title}
-                            subtitle={music.subtitle}
-                            key={music.key}
-                            Id={music.key}
-                        />
+                        <Fade bottom key={music.key}
+                        >
+
+
+                            <MusicBox
+                                Img={music.share.image}
+                                Title={music.title}
+                                subtitle={music.subtitle}
+                                Id={music.key}
+                                key={music.key}
+                            />
+                        </Fade>
                     );
                 })
             ) : (
@@ -27,3 +79,7 @@ const DiscoverBox = () => {
 };
 
 export default DiscoverBox;
+
+
+
+

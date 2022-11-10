@@ -3,7 +3,7 @@ import od from "../../assets/‫نجاة_الصغيرة_-_لا_تكذبي‬(128
 import { CgClose } from "react-icons/cg";
 import "./MusicPlay.css";
 import { useState, useContext, useEffect } from "react";
-import { IdContext } from "../../constants/ContextApi";
+import { IdContext } from "../../constants/ContextMusicApi.js";
 import { musicData } from "../../constants/data";
 
 const MusicPlay = () => {

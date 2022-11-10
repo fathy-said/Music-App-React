@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { ContextApi } from "./constants/ContextApi.js";
+import { ContextMusicApi } from "./constants/ContextMusicApi.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <ContextApi>
+        <ContextMusicApi>
             <App />
-        </ContextApi>
+        </ContextMusicApi>
     </React.StrictMode>
 );

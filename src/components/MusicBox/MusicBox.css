@@ -4,6 +4,7 @@
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   border-radius: 10px;
+  height: 100%;
 }
 
 .music-box .box-img {

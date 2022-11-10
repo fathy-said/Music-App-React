@@ -3,7 +3,7 @@ import "./SmChart.css";
 import { BsFillPlayFill } from "react-icons/bs";
 import { musicData } from "../../constants/data";
 import { useContext } from "react";
-import { IdContext } from "../../constants/ContextApi";
+import { IdContext } from "../../constants/ContextMusicApi.js";
 const SmChart = () => {
     const { changeContextID } = useContext(IdContext);
 
